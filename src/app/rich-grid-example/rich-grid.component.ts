@@ -1,21 +1,14 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-// for enterprise features
+
 import { AllModules, ColumnApi, GridApi, Module } from '@ag-grid-enterprise/all-modules';
 import { HeaderGroupComponent } from '../header-group-component/header-group.component';
 import { SortableHeaderComponent } from '../header-component/sortable-header.component';
 import { RendererComponent } from '../renderer-component/renderer.component';
 
-// for community features
-// import {Module, CommunityModules} from "@ag-grid-community/all-modules";
-
-// set your key here
-// import {LicenseManager} from "@ag-grid-enterprise/all-modules";
-// LicenseManager.setLicenseKey(<your key>);
-
 @Component({
     selector: 'rich-grid',
     templateUrl: 'rich-grid.component.html',
-    styleUrls: ['rich-grid.css', 'proficiency-renderer.css'],
+    styleUrls: ['rich-grid.css'],
     encapsulation: ViewEncapsulation.None
 })
 export class RichGridComponent {
