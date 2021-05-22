@@ -1,28 +1,26 @@
 
-AG Grid Angular CLI Example
-==================================
+AG Grid Angular CLI Example With Mindler Data
+==============================================
 
 Example of using AG Grid with Angular and TypeScript, using the Angular CLI to build and serve the application.
 
-**Note** We only show the "Rich Grid" example in use here. 
 
-For the full set of examples please look under refer to [www.ag-grid.com](https://www.ag-grid.com)
 
 Building
 ========
 
 Install Dependencies:
 
-- `npm install`
+- `npm install --force`
 
 Dev Server
 =========
 
 To build & run:
 
-- `npm start`
+- `ng serve`
 
-Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 Building
 ========
