@@ -1,0 +1,52 @@
+<div style="width: 100%; padding: 20px">
+    <h1>College Details</h1>
+    <div style="width: 800px">
+        <div style="display: inline-block; width: 100%">
+            <div style="float: left">
+                <b>College Details: </b>{{rowCount}}
+            </div>
+        </div>
+        <div style="margin-top: 10px">
+            <div>
+            <span>
+                Grid API:
+                <button (click)="this.api.selectAll()" class="btn btn-primary">Select All</button>
+                <button (click)="this.api.deselectAll()" class="btn btn-primary">Clear Selection</button>
+            </span>
+            </div>
+        </div>
+        <div style="display: inline-block; width: 100%; margin-top: 10px; margin-bottom: 10px">
+            <div style="float: left">
+                <label for="sideBarToggle">Show Side Bar&nbsp;</label>
+                <input type="checkbox" id="sideBarToggle" (change)="sideBar=$event.target.checked" style="margin-right: 5px"/>
+            </div>
+            <div style="float: right; margin-left: 20px">
+                <label for="quickFilter">Quick Filter:&nbsp;</label>
+                <input (keyup)="onQuickFilterChanged($event)" type="text" id="quickFilter"
+                       placeholder="Type text to filter..." style="margin-right: 10px"/>
+            </div>
+        </div>
+    </div>
+    <ag-grid-angular style="width: 100%; padding-right: 20px; height: 650px;" class="ag-theme-alpine"
+                     [columnDefs]="columnDefs"
+                     [sideBar]="sideBar"
+                     [rowData]="rowData"
+
+                     [defaultColDef]="defaultColDef"
+                     [frameworkComponents]="frameworkComponents"
+                     [modules]="modules"
+                     [pagination]="true"
+                     [paginationAutoPageSize]="true"
+                     enableCharts
+                     enableRangeSelection
+
+                     suppressRowClickSelection
+                     rowSelection="multiple"
+
+                     (gridReady)="onGridReady($event)"
+                     (modelUpdated)="onModelUpdated()"
+                     (cellClicked)="onCellClicked($event)"
+                     (cellDoubleClicked)="onCellDoubleClicked($event)"
+                     (cellContextMenu)="onCellContextMenu($event)">
+    </ag-grid-angular>
+</div>
